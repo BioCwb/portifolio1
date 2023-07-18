@@ -1,0 +1,10 @@
+import "../sectionTitle/sectionTitle.scss"
+
+interface SectioTitleProps {
+    text: string
+}
+export function SectioTitle({ text} : SectioTitleProps) {
+    return(
+        <h3>{text}</h3>
+    )
+}

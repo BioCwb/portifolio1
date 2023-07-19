@@ -1,29 +1,26 @@
+import Image from 'next/image'
 import { Experience } from './components/experience/experience'
 import { Header } from './components/header/header'
-import './styles/home.scss'
+import { Info } from './components/information/information'
+
+import "./styles/home.scss"
+import { EmailIcon } from './components/icons/email-icon'
+import { SocialBtns } from './components/social-btns/social-btns'
+import { Skill } from './components/skill/skill'
 
 export default function Home() {
   return (
-    <main className='container'>
-      <Header />
-      <Experience />
-      <div className="infos">
-        <h3>Languages</h3>
-        <div className="languages-info">
-          <span>EN - Basic</span>
-          <span>PT-BR - Native Speaker</span>
+    <main className="container">
+        <Header/>
+        <Experience/>
+        <Info/>
+        <div className="buttons">
+          <SocialBtns/>
+          <a className="btn-primary" href="mailto:teste@gmail.com">
+            contact me
+            <EmailIcon/>
+          </a>
         </div>
-        <h3>Education</h3>
-        <div className="educatio-info">
-        <span>Analista e Desenvolvimento de sistemas - Unicesumar</span>
-        <span>Bacharel em sistemas da informação - Facuildades Spei</span>
-        </div>
-      </div>
-      <div className="buttons">
-        <div className="social"></div>
-        <button>Contact me</button>
-      </div>
-      
     </main>
   )
 }
